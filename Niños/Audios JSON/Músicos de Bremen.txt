@@ -1,0 +1,71 @@
+Audio 1:
+
+{
+  "inputs": [
+    { "text": "[curious] Hola, soy la Hada Cuenta Cuentos. Esta es una producción original de Ixmaia. Hoy comienza una aventura muy especial: la historia de los músicos de Bremen.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[lighthearted] En un viejo molino, rodeado de campos dorados y sacos de harina, vivía un burro trabajador que había cargado peso durante muchísimos años.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[sighs] Ay… mis patas están cansadas. Durante años llevé sacos y más sacos de harina.", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[reflective] Pero últimamente he escuchado a mi dueño decir que ya soy demasiado viejo.", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[sighs] Y cuando los humanos piensan eso… las cosas pueden ponerse difíciles.", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[reflective] El burro miró el camino que salía del molino y pensó por un momento en silencio.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[excited] ¡Ya lo sé! Iré a Bremen. Dicen que allí buscan músicos.", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[excited] Tal vez mi fuerte rebuzno pueda convertirse en parte de una gran banda.", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[lighthearted] Y con ese nuevo sueño en su corazón, el burro comenzó a caminar por el camino polvoriento.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[curious] El sol estaba subiendo cuando, más adelante en el camino, encontró a un perro acostado bajo un árbol.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[tired] Amigo burro… he corrido durante muchos años detrás de conejos y ciervos.", "voice_id": "LRpNiUBlcqgIsKUzcrlN" },
+
+    { "text": "[sighs] Pero ahora mis patas también están cansadas.", "voice_id": "LRpNiUBlcqgIsKUzcrlN" },
+
+    { "text": "[sighs] Mi dueño dice que ya no soy un buen perro de caza.", "voice_id": "LRpNiUBlcqgIsKUzcrlN" },
+
+    { "text": "[curious] ¿Y qué harás ahora?", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[reflective] No lo sé… tal vez deba caminar por el bosque buscando comida.", "voice_id": "LRpNiUBlcqgIsKUzcrlN" },
+
+    { "text": "[excited] ¡Tengo una idea!", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[excited] Voy camino a Bremen para convertirme en músico.", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[excited] Seguro tu fuerte ladrido puede ser parte de nuestra banda.", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[curious] ¿Una banda musical?", "voice_id": "LRpNiUBlcqgIsKUzcrlN" },
+
+    { "text": "[excited] ¡Claro! Tú ladras, yo rebuzno… y juntos haremos una música muy especial.", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[starts laughing] Ja ja… eso suena mucho mejor que vagar solo por el bosque.", "voice_id": "LRpNiUBlcqgIsKUzcrlN" },
+
+    { "text": "[excited] ¡Entonces iré contigo!", "voice_id": "LRpNiUBlcqgIsKUzcrlN" },
+
+    { "text": "[lighthearted] Así que el burro y el perro comenzaron a caminar juntos por el camino.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[reflective] Mientras avanzaban, hablaban sobre la música que algún día tocarían en la ciudad de Bremen.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[excited] Imagínalo amigo perro… un gran escenario.", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[excited] Personas escuchando nuestra música.", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[excited] ¡Y nosotros siendo los músicos más famosos del camino!", "voice_id": "orF2qy9215xjwqqxqsWW" },
+
+    { "text": "[laughs] ¡Guau! Creo que me gusta esa idea.", "voice_id": "LRpNiUBlcqgIsKUzcrlN" },
+
+    { "text": "[lighthearted] Y así continuaron su viaje, paso a paso, con esperanza en el corazón.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[curious] Pero muy pronto encontrarían a otro animal que también necesitaba un nuevo hogar.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[excited] Y cuando eso ocurra… su banda musical comenzará a crecer.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[lighthearted] Pero esa es una historia para el siguiente episodio.", "voice_id": "gt07NFYFX440tos6uIKK" },
+
+    { "text": "[lighthearted] Encuentra más cuentos y capítulos como este en ixmaia.com.", "voice_id": "gt07NFYFX440tos6uIKK" }
+  ]
+}

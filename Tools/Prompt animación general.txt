@@ -1,0 +1,48 @@
+Animate this image as a short cinematic scene while preserving the original composition and characters.
+
+The animation should feel natural and gentle, like a living illustration.
+
+Motion style:
+slow and subtle animation
+storybook atmosphere
+characters may move slightly but should not change position drastically
+
+Environmental motion:
+soft drifting particles or fireflies in the air
+leaves or grass moving gently in a light breeze
+very subtle light flicker from windows or light sources
+calm ambient motion only
+
+Camera:
+static camera
+no zoom
+no panning
+no perspective changes
+
+Timing:
+the animation should begin very softly from a nearly still image
+movement increases slightly in the middle of the clip
+the animation slows down again near the end
+
+Transition behavior:
+the first second should be visually calm and stable
+the final second should also become calm and stable
+avoid sudden movements at the beginning or end
+ensure the final frame is visually stable so another clip can follow naturally
+
+Composition rules:
+do not change the layout of the scene
+do not introduce new characters
+do not remove existing objects
+maintain the original lighting and framing
+
+Important constraints:
+no text
+no scene cuts
+no abrupt movements
+no objects suddenly entering or leaving the frame
+
+Duration:
+6–8 seconds
+
+The result should look like a calm animated illustration that starts and ends smoothly so multiple clips can be joined together without noticeable visual jumps.

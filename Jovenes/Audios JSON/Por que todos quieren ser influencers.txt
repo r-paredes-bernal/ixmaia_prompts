@@ -1,0 +1,60 @@
+{
+  "inputs": [
+    {
+      "voice_id": "htFfPSZGJwjBv1CL0aMD",
+      "text": "[excited] Hola, soy Alex. Bienvenido a la Temporada 2 de Conversaciones que te hacen pensar, una producción original de ixmaia."
+    },
+    {
+      "voice_id": "htFfPSZGJwjBv1CL0aMD",
+      "text": "[curious] Episodio 2. Hoy queremos hablar de algo que se escucha cada vez más: ¿por qué tanta gente quiere ser influencer?"
+    },
+    {
+      "voice_id": "oaJgexHyc6Y2bOaiXPGb",
+      "text": "[curious] Sí, es verdad. Antes la gente soñaba con ser doctora, astronauta o cantante… y ahora muchísimos dicen: quiero ser influencer."
+    },
+    {
+      "voice_id": "94zOad0g7T7K4oa7zhDq",
+      "text": "[reflective] Tiene sentido si lo piensas. En redes vemos personas que parecen tener fama, dinero, viajes y mucha atención… todo al mismo tiempo."
+    },
+    {
+      "voice_id": "htFfPSZGJwjBv1CL0aMD",
+      "text": "[laughs] Sí… parece el trabajo perfecto. Subes videos, la gente te sigue, las marcas te pagan… y listo."
+    },
+    {
+      "voice_id": "oaJgexHyc6Y2bOaiXPGb",
+      "text": "[curious] Pero creo que casi nunca vemos lo que pasa detrás. El tiempo que toma grabar, editar, pensar ideas… o la presión de estar publicando todo el tiempo."
+    },
+    {
+      "voice_id": "94zOad0g7T7K4oa7zhDq",
+      "text": "[reflective] Exacto. Muchos creadores dicen que mantener una audiencia puede ser muy demandante. La atención de internet cambia rápido."
+    },
+    {
+      "voice_id": "htFfPSZGJwjBv1CL0aMD",
+      "text": "[curious] Y también está eso de los likes… cuando algo funciona te sientes increíble, pero cuando no funciona tanto…"
+    },
+    {
+      "voice_id": "oaJgexHyc6Y2bOaiXPGb",
+      "text": "[sighs] Sí… puede sentirse como si tu valor dependiera de cuántas personas reaccionan a lo que publicas."
+    },
+    {
+      "voice_id": "94zOad0g7T7K4oa7zhDq",
+      "text": "[reflective] Lo interesante es que las redes cambiaron la forma en que vemos el éxito. Antes el reconocimiento venía de logros a largo plazo. Ahora muchas veces se mide en vistas o seguidores."
+    },
+    {
+      "voice_id": "htFfPSZGJwjBv1CL0aMD",
+      "text": "[curious] Entonces tal vez no se trata de si ser influencer está bien o mal… sino de por qué queremos serlo."
+    },
+    {
+      "voice_id": "oaJgexHyc6Y2bOaiXPGb",
+      "text": "[soft] Exacto. Si es para compartir algo que realmente te gusta, puede ser increíble. Pero si es solo para sentir validación… puede volverse complicado."
+    },
+    {
+      "voice_id": "94zOad0g7T7K4oa7zhDq",
+      "text": "[reflective] Tal vez la pregunta importante no es cuántos seguidores tiene alguien… sino qué tipo de impacto quiere tener."
+    },
+    {
+      "voice_id": "htFfPSZGJwjBv1CL0aMD",
+      "text": "[curious] Y ahora te dejamos una pregunta para pensar. Si pudieras tener miles de seguidores en internet… ¿qué tipo de contenido te gustaría compartir con ellos?"
+    }
+  ]
+}
