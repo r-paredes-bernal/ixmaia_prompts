@@ -1,0 +1,322 @@
+/* ---------- Post-it base */
+:root{
+  --text: #2E2E2E;
+  --text-strong:#1F1F1F;
+  --muted:#6B6B6B;
+  --link:#4DA3FF;
+  --link-hover:#1F82E5;
+  --border:#D6D6D6;
+  --bg-chip:#fff;
+}
+html{ font-size: 16px; } /* 1rem = 16px */
+body{
+  color: #2E2E2E !important;
+  font-weight: 500;
+  line-height: 1.6  !important;
+  margin:0;
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; !important
+}
+/* Texto */
+p, li{ font-size: 1rem; color: #2E2E2E; }
+strong, b{ font-weight: 600; color: #202123; }
+em, i{ font-style: italic; }
+/* Enlaces */a
+a{
+  color: #1F82E5;
+  text-decoration: none;
+}
+a:hover{ color: #4DA3FF; text-decoration: underline; }
+/* Listas (heredan) */
+ul, ol{
+  padding-left: 1.2rem;
+  margin: .5rem 0 .75rem;
+}
+/* ---------- Encabezados: escala clara y aire ---------- */
+h1, h2, h3{
+  color: var(--text-strong);
+  line-height: 1.25;
+  letter-spacing: -0.0125em;
+  margin: 1.25rem 0 .6rem; /* ritmo vertical */
+  color: #202123;
+}
+h1{
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.25rem); /* ~28–36px */
+  font-weight: 700;
+}
+h2{
+  font-size: clamp(1.375rem, 1.05rem + 1.2vw, 1.75rem); /* ~22–28px */
+  font-weight: 650;
+}
+h3{
+  font-size: clamp(1.125rem, 1rem + .6vw, 1.375rem); /* ~18–22px */
+  font-weight: 500;
+}
+/* Subtítulos estilo "Paso X" si los usas como h3 */
+h3 + p{ margin-top: .25rem; }
+
+/* ---------- NOTAS Iinteractivas ---------- */
+blockquote {
+  position: relative;
+  font-size: 1rem;
+  color: #444;
+  padding: 1.2rem 1.5rem 1.2rem 3rem;
+  margin: 1.5rem 0;
+  background: linear-gradient(180deg, #fffde7 0%, #fff9c4 100%);
+  border-left: 3px solid  #4DA3FF;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  cursor: pointer; /* Todas son clicables */
+}
+
+blockquote:hover {
+  background: linear-gradient(180deg, #fff9c4 0%, #fff59d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+blockquote:active {
+  transform: scale(0.99);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+blockquote:focus-visible {
+  outline: 3px solid var(--link);
+  outline-offset: 3px;
+  background: linear-gradient(180deg, #fff9c4 0%, #fff176 100%);
+}
+
+/* ---------- Utilidades ---------- */
+small{
+  font-size: .85rem;
+  color: #7a7a7a;
+  display:block;
+  margin-top: .5rem;
+  font-style: italic;
+  letter-spacing: .2px;
+}
+
+/* Video */ 
+.dino-video-container{ max-width:640px; width:100%; margin:0 auto; } .dino-video-container video{ width:100%; height:auto; border-radius:10px; background:#222; display:block; }
+
+.container{
+  max-width: 900px; margin:0 auto;
+}
+.badge{
+  display:inline-block;
+  margin-left:.5rem;
+  padding:.1rem .4rem;
+  background:#eef2f7;
+  border:1px solid #dbe2ea;
+  border-radius:6px;
+  font-size:.8rem;
+  color:#51607a;
+  vertical-align: middle;
+}
+pre.code{
+  background:#f7f7f7;
+  border:1px solid #e5e5e5;
+  padding:10px 12px;
+  border-radius:8px;
+  overflow:auto;
+}
+/* ==========================
+   QUICK LINKS BASE (dummy)
+   ========================== */
+a[href^="https://dummy.quickreply/"] {
+  display: inline-block;
+  margin: .4em .5em .4em 0;
+  padding: .5em 1.4em;
+  background: var(--bg-chip);
+  color: #222 !important;
+  border: 1.5px solid #ccc;
+  border-radius: 1.5em;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  transition: background .2s, box-shadow .2s, color .2s, border-color .2s;
+  font-size: 1rem;
+  text-decoration: none !important;
+}
+a[href^="https://dummy.quickreply/"]:hover,
+a[href^="https://dummy.quickreply/"]:focus {
+  background: #f3f3f3;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  color: #000 !important;
+  border-color: #999;
+  text-decoration: none !important;
+}
+
+/* =========================================================
+   TABLAS “ESTILO CHATGPT” (para tablas de Markdown sin estilos)
+   ========================================================= */
+/* Envuélvelas si puedes con .container; de todas formas se aplican global */
+.container table, table{
+  width: 100%;
+  border-collapse: separate;   /* permite el border-radius */
+  border-spacing: 0;
+  margin: 1rem 0 1.25rem;
+  font-size: .95rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;  /* borde exterior suave */
+  border-radius: 12px;
+  overflow: hidden;            /* oculta bordes de celdas en las esquinas */
+}
+
+/* Encabezado */
+.container thead th, thead th{
+  background: #f7f7f8;        /* gris claro tipo ChatGPT */
+  color: #202123;
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+/* Celdas */
+.container td, .container th, td, th{
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0f0f0;  /* líneas divisorias suaves */
+  vertical-align: top;
+}
+
+/* Zebra + hover sutil */
+tbody tr:nth-child(even){ background:#fbfbfb; }
+tbody tr:hover{ background: #f2f5f9; }
+
+/* Alineación práctica para números (usa clases opcionales) */
+td.right, th.right{ text-align: right; }
+td.center, th.center{ text-align: center; }
+td.nowrap{ white-space: nowrap; }
+
+/* Cabecera “pegada” si hay scroll horizontal (no afecta si no lo hay) */
+thead th{ position: sticky; top: 0; z-index: 1; }
+
+/* Capciones (título de tabla) */
+caption{
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  color: #202123;
+  padding: .25rem .25rem .5rem;
+}
+
+/* Código dentro de celdas (por si el plugin mete backticks) */
+td code, th code{
+  background:#f7f7f7;
+  border:1px solid #e5e5e5;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: .9em;
+}
+
+/* Responsivo: scroll horizontal en móviles sin romper layout */
+.table-wrap{ width:100%; overflow:auto; -webkit-overflow-scrolling: touch; }
+.table-wrap > table{ margin: 0; } /* si envuelves la tabla con .table-wrap */
+
+/* Compactación en pantallas pequeñas */
+@media (max-width: 640px){
+  table{ font-size: .92rem; }
+  td, th{ padding: 8px 10px; }
+}
+
+/* ============================================
+   LISTENLAB — PLAY LISTENING DIV (Light Mode)
+   Clean, calm, premium, adult
+   ============================================ */
+
+#play_listening{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+
+  padding: 0.85em 1.2em;
+  margin: 0.9em 0 1.1em 0;
+
+  background: linear-gradient(135deg, #f8fafc, #eef2f7); /* soft light */
+  color: #1f2937; /* slate-800 */
+
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.08);
+
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+  user-select: none;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+/* ▶ Play icon */
+#play_listening::before{
+  content: "▶";
+  font-size: 0.85em;
+  color: #2563eb; /* blue-600 */
+  transform: translateY(1px);
+}
+
+/* Hover — very subtle */
+#play_listening:hover{
+  background: linear-gradient(135deg, #ffffff, #e9eef5);
+  transform: translateY(-1px);
+  box-shadow:
+    0 10px 24px rgba(0,0,0,0.12);
+}
+
+/* Active — press */
+#play_listening:active{
+  transform: translateY(0);
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.12),
+    inset 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Focus — accessible but elegant */
+#play_listening:focus{
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(37,99,235,0.25),
+    0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Playing state */
+#play_listening.is-playing{
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+}
+
+#play_listening.is-playing::before{
+  content: "⏸";
+  color: #1d4ed8;
+}
+
+/* Disabled */
+#play_listening.is-disabled{
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+#reading-text {
+  background: #fcfcfd;
+  border-left: 4px solid #c9ced6;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 12px 0 16px 0;
+  line-height: 1.7;
+  color: #1f2937;
+  font-size: 16px;
+  white-space: pre-wrap;
+}
