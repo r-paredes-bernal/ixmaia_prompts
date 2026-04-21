@@ -1,0 +1,342 @@
+/* =========================================
+   teens_anime_studio (para jóvenes)
+   - Más “anime / studio”: limpio, moderno, con acentos neón
+   - Sin variables :root (tu plugin no las aplica)
+   ========================================= */
+
+/* ---------- Base ---------- */
+html{ font-size: 16px; } /* 1rem = 16px */
+
+body{
+  color: #1F2328 !important;
+  font-weight: 500;
+  line-height: 1.65 !important;
+  margin: 0;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji" !important;
+}
+
+/* Texto */
+p, li{
+  font-size: 1rem;
+  color: #1F2328;
+}
+strong, b{
+  font-weight: 700;
+  color: #0B0F14;
+}
+em, i{ font-style: italic; }
+
+/* Enlaces */
+a{
+  color: #3B82F6;
+  text-decoration: none;
+}
+a:hover{
+  color: #2563EB;
+  text-decoration: underline;
+}
+
+/* Listas */
+ul, ol{
+  padding-left: 1.2rem;
+  margin: .5rem 0 .85rem;
+}
+
+/* ---------- Encabezados ---------- */
+h1, h2, h3{
+  color: #0B0F14;
+  line-height: 1.22;
+  letter-spacing: -0.0125em;
+  margin: 1.25rem 0 .6rem;
+}
+h1{
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.25rem);
+  font-weight: 800;
+}
+h2{
+  font-size: clamp(1.375rem, 1.05rem + 1.2vw, 1.75rem);
+  font-weight: 750;
+}
+h3{
+  font-size: clamp(1.125rem, 1rem + .6vw, 1.375rem);
+  font-weight: 650;
+}
+h3 + p{ margin-top: .25rem; }
+
+/* =========================================================
+   QUOTE / NOTA (más “studio”, menos infantil)
+   - Fondo claro con borde neón sutil
+   - Barra lateral tipo “marker”
+   ========================================================= */
+blockquote{
+  position: relative;
+  font-size: 1rem;
+  color: #111827;
+  padding: 1.15rem 1.2rem 1.15rem 1.15rem;
+  margin: 1.25rem 0;
+
+  /* base limpia */
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7F9FC 100%);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+
+  /* “accent bar” anime/neón */
+  border-left: 6px solid #7C3AED;
+
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.08);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .2s ease, background .2s ease;
+}
+
+blockquote::before{
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 14px;
+  width: 6px;
+  height: calc(100% - 28px);
+  border-radius: 10px;
+  background: linear-gradient(180deg, #7C3AED 0%, #22D3EE 100%);
+}
+
+/* Hover sobrio (no “juguetón”) */
+blockquote:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(2, 6, 23, 0.12);
+  border-color: rgba(124, 58, 237, 0.25);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F4F7FF 100%);
+}
+
+blockquote:active{
+  transform: translateY(0);
+  box-shadow: 0 9px 18px rgba(2, 6, 23, 0.12);
+}
+
+blockquote:focus-visible{
+  outline: 3px solid rgba(59, 130, 246, 0.55);
+  outline-offset: 3px;
+}
+
+/* Utilidades */
+small{
+  font-size: .86rem;
+  color: #6B7280;
+  display: block;
+  margin-top: .55rem;
+  font-style: italic;
+  letter-spacing: .15px;
+}
+
+/* Video */
+.dino-video-container{ max-width:640px; width:100%; margin:0 auto; }
+.dino-video-container video{ width:100%; height:auto; border-radius:12px; background:#111827; display:block; }
+
+.container{ max-width: 900px; margin: 0 auto; }
+
+.badge{
+  display:inline-block;
+  margin-left:.5rem;
+  padding:.12rem .5rem;
+  background:#F1F5F9;
+  border:1px solid #E2E8F0;
+  border-radius:8px;
+  font-size:.82rem;
+  color:#334155;
+  vertical-align: middle;
+}
+
+/* Código */
+pre.code{
+  background:#0B1220;                 /* “studio dark” */
+  color:#E5E7EB;
+  border:1px solid rgba(148, 163, 184, 0.22);
+  padding:12px 14px;
+  border-radius:12px;
+  overflow:auto;
+}
+
+/* =========================================================
+   BOTÓN GENERAR IMAGEN (jóvenes)
+   - Más “CTA” y menos pastel
+   - Neón sutil, borde y glow controlado
+   ========================================================= */
+.boton-generar{
+  position: relative;
+  display: block;
+  padding: 1.2rem 1.4rem;
+  width: 380px;
+  max-width: 380px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+
+  /* fondo moderno */
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6F8FF 100%);
+
+  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.10);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .2s ease, background .2s ease;
+}
+
+/* Accent bar arriba (tipo “UI card”) */
+.boton-generar::before{
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  top: 10px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7C3AED 0%, #22D3EE 60%, #34D399 100%);
+  opacity: .9;
+}
+
+/* Hover: sube poquito + glow fino */
+.boton-generar:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(2, 6, 23, 0.16);
+  border-color: rgba(124, 58, 237, 0.28);
+  background: linear-gradient(180deg, #FFFFFF 0%, #EEF3FF 100%);
+}
+
+/* Título y subtítulo */
+.boton-generar b{
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #0B0F14;
+  letter-spacing: 0.2px;
+  margin-top: .2rem;   /* para no pegarse al accent bar */
+  margin-bottom: .35rem;
+}
+
+.boton-generar p{
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.35;
+}
+
+/* =========================================================
+   QUICK LINKS (jóvenes) - pill sobrios + acento neón
+   - Mantengo tu esquema por dominios quickreply
+   ========================================================= */
+
+/* Base (dummy) */
+a[href^="https://dummy.quickreply/"]{
+  display: inline-block;
+  margin: .45em .55em .45em 0;
+  padding: .55em 1.2em;
+  background: #FFFFFF;
+  color: #0B0F14 !important;
+  border: 1.5px solid rgba(15, 23, 42, 0.16);
+  border-radius: 999px;
+  font-weight: 400;
+  box-shadow: 0 8px 16px rgba(2, 6, 23, .06);
+  transition: transform .12s ease, box-shadow .18s ease, border-color .18s ease;
+  font-size: 1rem;
+  text-decoration: none !important;
+}
+a[href^="https://dummy.quickreply/"]:hover,
+a[href^="https://dummy.quickreply/"]:focus{
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(2, 6, 23, .10);
+  border-color: rgba(59, 130, 246, .30);
+}
+
+/* Colores (4) - más “anime neon” */
+a[href^="https://blue.quickreply"],
+a[href^="https://green.quickreply"],
+a[href^="https://yellow.quickreply"],
+a[href^="https://pink.quickreply"]{
+  display: inline-block;
+  margin: .5em .6em .5em 0;
+  padding: 0.75em 1.25em;
+  border-radius: 999px;
+  font-size: 1.02rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 10px 20px rgba(2, 6, 23, .12);
+  transition: transform .10s ease, box-shadow .18s ease, filter .18s ease;
+  text-decoration: none !important;
+}
+a[href*=".quickreply/"]:hover{ transform: translateY(-1px); filter: brightness(.98); }
+a[href*=".quickreply/"]:active{ transform: translateY(0); filter: brightness(.96); }
+
+a[href^="https://blue.quickreply"]   { background: #2563EB; color:#fff !important; }
+a[href^="https://green.quickreply"]  { background: #10B981; color:#06251A !important; }
+a[href^="https://yellow.quickreply"] { background: #FBBF24; color:#111827 !important; }
+a[href^="https://pink.quickreply"]   { background: #A855F7; color:#fff !important; }
+
+/* =========================================================
+   TABLAS (igual que tu estilo actual, solo sin vars)
+   ========================================================= */
+.container table, table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0 1.25rem;
+  font-size: .95rem;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.container thead th, thead th{
+  background: #F7F7F8;
+  color: #0B0F14;
+  text-align: left;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-bottom: 1px solid #E5E7EB;
+  vertical-align: middle;
+}
+
+.container td, .container th, td, th{
+  padding: 10px 12px;
+  border-bottom: 1px solid #F1F5F9;
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even){ background:#FBFBFD; }
+tbody tr:hover{ background: #F2F6FF; }
+
+td.right, th.right{ text-align: right; }
+td.center, th.center{ text-align: center; }
+td.nowrap{ white-space: nowrap; }
+
+thead th{ position: sticky; top: 0; z-index: 1; }
+
+caption{
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  color: #0B0F14;
+  padding: .25rem .25rem .5rem;
+}
+
+td code, th code{
+  background:#F3F4F6;
+  border:1px solid #E5E7EB;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: .92em;
+}
+
+/* Responsivo */
+.table-wrap{ width:100%; overflow:auto; -webkit-overflow-scrolling: touch; }
+.table-wrap > table{ margin: 0; }
+
+@media (max-width: 640px){
+  table{ font-size: .92rem; }
+  td, th{ padding: 8px 10px; }
+  .boton-generar{ max-width: 100%; }
+}

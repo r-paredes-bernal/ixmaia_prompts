@@ -1,0 +1,385 @@
+/* =========================================
+   teens_anime_studio (para jóvenes)
+   - Más “anime / studio”: limpio, moderno, con acentos neón
+   - Sin variables :root (tu plugin no las aplica)
+   ========================================= */
+
+/* ---------- Base ---------- */
+html{ font-size: 16px; } /* 1rem = 16px */
+
+body{
+  color: #1F2328 !important;
+  font-weight: 500;
+  line-height: 1.65 !important;
+  margin: 0;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji" !important;
+}
+
+/* Texto */
+p, li{
+  font-size: 1rem;
+  color: #1F2328;
+}
+strong, b{
+  font-weight: 700;
+  color: #0B0F14;
+}
+em, i{ font-style: italic; }
+
+/* Enlaces */
+a{
+  color: #3B82F6;
+  text-decoration: none;
+}
+a:hover{
+  color: #2563EB;
+  text-decoration: underline;
+}
+
+/* Listas */
+ul, ol{
+  padding-left: 1.2rem;
+  margin: .5rem 0 .85rem;
+}
+
+/* ---------- Encabezados ---------- */
+h1, h2, h3{
+  color: #0B0F14;
+  line-height: 1.22;
+  letter-spacing: -0.0125em;
+  margin: 1.25rem 0 .6rem;
+}
+h1{
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.25rem);
+  font-weight: 800;
+}
+h2{
+  font-size: clamp(1.375rem, 1.05rem + 1.2vw, 1.75rem);
+  font-weight: 750;
+}
+h3{
+  font-size: clamp(1.125rem, 1rem + .6vw, 1.375rem);
+  font-weight: 650;
+}
+h3 + p{ margin-top: .25rem; }
+
+/* =========================================================
+   POST-IT / NOTA — Cuaderno Ghibli + 📌
+   ========================================================= */
+blockquote{
+  position: relative;
+
+  font-size: 1rem;
+  color: #3F3F3F;
+
+  padding: 1.4rem 1.3rem 1.2rem;
+  margin: 1.4rem 0;
+
+  background: linear-gradient(180deg, #FFFDF7 0%, #F6F3E8 100%);
+
+  border: 1.5px solid rgba(120, 102, 72, 0.18);
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 22px rgba(90, 74, 53, 0.10),
+    inset 0 2px 6px rgba(255,255,255,0.45);
+
+  transition:
+    transform .18s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+/* 📌 pin decorativo */
+blockquote::before{
+  content: "📌";
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  font-size: 1.2rem;
+
+  transform: rotate(-12deg);
+
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15));
+}
+
+/* textura papel */
+blockquote::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0.015),
+    rgba(0,0,0,0.015) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  pointer-events: none;
+  border-radius: 16px;
+}
+
+/* hover suave */
+blockquote:hover{
+  transform: translateY(-1px);
+  box-shadow:
+    0 14px 28px rgba(90, 74, 53, 0.14),
+    inset 0 2px 6px rgba(255,255,255,0.5);
+
+  background: linear-gradient(180deg, #FFFDF9 0%, #F3EEDC 100%);
+}
+
+/* Utilidades */
+small{
+  font-size: .86rem;
+  color: #6B7280;
+  display: block;
+  margin-top: .55rem;
+  font-style: italic;
+  letter-spacing: .15px;
+}
+
+/* Video */
+.dino-video-container{ max-width:640px; width:100%; margin:0 auto; }
+.dino-video-container video{ width:100%; height:auto; border-radius:12px; background:#111827; display:block; }
+
+.container{ max-width: 900px; margin: 0 auto; }
+
+.badge{
+  display:inline-block;
+  margin-left:.5rem;
+  padding:.12rem .5rem;
+  background:#F1F5F9;
+  border:1px solid #E2E8F0;
+  border-radius:8px;
+  font-size:.82rem;
+  color:#334155;
+  vertical-align: middle;
+}
+
+/* Código */
+pre.code{
+  background:#0B1220;                 /* “studio dark” */
+  color:#E5E7EB;
+  border:1px solid rgba(148, 163, 184, 0.22);
+  padding:12px 14px;
+  border-radius:12px;
+  overflow:auto;
+}
+
+/* =========================================================
+   BOTÓN GENERAR IMAGEN — Cuaderno de dibujo (refinado)
+   ========================================================= */
+.boton-generar{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.3rem 1.4rem;
+  width: 380px;
+  max-width: 380px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  /* ✅ borde limpio (no punteado) */
+  border: 1.5px solid rgba(120, 120, 120, 0.25);
+
+  background: #FFFDF7;
+
+  box-shadow:
+    0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* textura tipo papel */
+.boton-generar::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0.015),
+    rgba(0,0,0,0.015) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  pointer-events: none;
+}
+
+/* hover */
+.boton-generar:hover{
+  transform: translateY(-2px) rotate(-0.2deg);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.12);
+}
+
+/* =========================================================
+   FIX JERARQUÍA REAL SEGÚN TU HTML
+   p = título
+   b = subtítulo
+   ========================================================= */
+.boton-generar p{
+  margin: 0 0 .35rem 0 !important;
+
+  font-size: 1.45rem;
+  font-weight: 800 !important;
+  color: #2B2B2B;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+.boton-generar b{
+  display: block !important;
+
+  font-size: 1.1rem;
+  font-weight: 600 !important;
+  color: #4F4F4F;
+  line-height: 1.4;
+  text-align: center;
+}
+/* =========================================================
+   QUICK LINKS COLORES — estilo papel + tinta anime
+   ========================================================= */
+
+a[href^="https://blue.quickreply"],
+a[href^="https://green.quickreply"],
+a[href^="https://yellow.quickreply"],
+a[href^="https://pink.quickreply"]{
+
+  display: inline-block;
+  margin: .5em .6em .5em 0;
+  padding: 0.7em 1.2em;
+
+  border-radius: 999px;
+  font-size: 1.02rem;
+  font-weight: 500;
+  text-align: center;
+
+  /* Fondo tipo papel */
+  background: linear-gradient(180deg, #FFFDF7 0%, #F6F3E8 100%);
+
+  /* Borde base */
+  border: 1.5px solid rgba(120, 120, 120, 0.25);
+
+  /* Sombra cálida (match con blockquote) */
+  box-shadow:
+    0 8px 18px rgba(90, 74, 53, 0.10),
+    inset 0 2px 4px rgba(255,255,255,0.45);
+
+  text-decoration: none !important;
+
+  transition:
+    transform .12s ease,
+    box-shadow .18s ease,
+    border-color .18s ease;
+}
+
+/* textura papel */
+a[href*=".quickreply/"]::after{
+  display: none !important;
+}
+
+/* hover */
+a[href*=".quickreply/"]:hover{
+  transform: translateY(-1px);
+  box-shadow:
+    0 12px 24px rgba(90, 74, 53, 0.14),
+    inset 0 2px 6px rgba(255,255,255,0.5);
+}
+
+/* ---------- VARIANTES DE COLOR (tinta) ---------- */
+
+a[href^="https://blue.quickreply"]{
+  color: #1D4ED8 !important;
+  border-color: rgba(37, 99, 235, 0.45);
+}
+
+a[href^="https://green.quickreply"]{
+  color: #047857 !important;
+  border-color: rgba(16, 185, 129, 0.45);
+}
+
+a[href^="https://yellow.quickreply"]{
+  color: #92400E !important;
+  border-color: rgba(251, 191, 36, 0.55);
+}
+
+a[href^="https://pink.quickreply"]{
+  color: #7E22CE !important;
+  border-color: rgba(168, 85, 247, 0.45);
+}
+
+/* =========================================================
+   TABLAS (igual que tu estilo actual, solo sin vars)
+   ========================================================= */
+.container table, table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0 1.25rem;
+  font-size: .95rem;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.container thead th, thead th{
+  background: #F7F7F8;
+  color: #0B0F14;
+  text-align: left;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-bottom: 1px solid #E5E7EB;
+  vertical-align: middle;
+}
+
+.container td, .container th, td, th{
+  padding: 10px 12px;
+  border-bottom: 1px solid #F1F5F9;
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even){ background:#FBFBFD; }
+tbody tr:hover{ background: #F2F6FF; }
+
+td.right, th.right{ text-align: right; }
+td.center, th.center{ text-align: center; }
+td.nowrap{ white-space: nowrap; }
+
+thead th{ position: sticky; top: 0; z-index: 1; }
+
+caption{
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  color: #0B0F14;
+  padding: .25rem .25rem .5rem;
+}
+
+td code, th code{
+  background:#F3F4F6;
+  border:1px solid #E5E7EB;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: .92em;
+}
+
+/* Responsivo */
+.table-wrap{ width:100%; overflow:auto; -webkit-overflow-scrolling: touch; }
+.table-wrap > table{ margin: 0; }
+
+@media (max-width: 640px){
+  table{ font-size: .92rem; }
+  td, th{ padding: 8px 10px; }
+  .boton-generar{ max-width: 100%; }
+}

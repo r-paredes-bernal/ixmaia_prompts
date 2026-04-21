@@ -1,4 +1,4 @@
-/* ---------- Post-it base */
+/* ---------- Base ---------- No funcionan las variables en el plugin de markdown */
 :root{
   --text: #2E2E2E;
   --text-strong:#1F1F1F;
@@ -9,35 +9,34 @@
   --bg-chip:#fff;
 }
 html{ font-size: 16px; } /* 1rem = 16px */
+body > div{
+  background: transparent !important;
+}
 body{
   color: #2E2E2E !important;
   font-weight: 500;
-  line-height: 1.6 !important;
+  line-height: 1.6  !important;
   margin:0;
-  background:#fff;
+background: radial-gradient(#FAFAFF, #F2F8FF) !important;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji" !important;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; !important
 }
-
 /* Texto */
 p, li{ font-size: 1rem; color: #2E2E2E; }
 strong, b{ font-weight: 600; color: #202123; }
 em, i{ font-style: italic; }
-
-/* Enlaces */
+/* Enlaces */a
 a{
   color: #1F82E5;
   text-decoration: none;
 }
 a:hover{ color: #4DA3FF; text-decoration: underline; }
-
 /* Listas (heredan) */
 ul, ol{
   padding-left: 1.2rem;
   margin: .5rem 0 .75rem;
 }
-
 /* ---------- Encabezados: escala clara y aire ---------- */
 h1, h2, h3{
   color: var(--text-strong);
@@ -61,41 +60,30 @@ h3{
 /* Subtítulos estilo "Paso X" si los usas como h3 */
 h3 + p{ margin-top: .25rem; }
 
-/* ============================================
-   CONTEXT TEXT — Reading / Listening / Writing
-   Neutral content box, separate from post-its
-   ============================================ */
-.context-text{
-  background: #f7f7f8;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 1rem 1.2rem;
-  margin: .9rem 0 1.1rem 0;
-  color: #2E2E2E;
-  line-height: 1.7;
-  font-size: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,.04);
-}
-.context-text p:first-child{ margin-top: 0; }
-.context-text p:last-child{ margin-bottom: 0; }
-
-/* ---------- NOTAS Interactivas ---------- */
+/* ---------- Notas Verde Jungla (Niños) ---------- */
 blockquote {
   position: relative;
   font-size: 1rem;
   color: #444;
   padding: 1.2rem 1.5rem 1.2rem 3rem;
   margin: 1.5rem 0;
-  background: linear-gradient(180deg, #fffde7 0%, #fff9c4 100%);
-  border-left: 3px solid  #4DA3FF;
+
+  /* Fondo Verde Jungla */
+  background: linear-gradient(180deg, #E9FFE8 0%, #D3FCD1 100%);
+
+  /* Línea lateral */
+  border-left: 3px solid #2ECC71;
+
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
-  cursor: pointer; /* Todas son clicables */
+  cursor: pointer;
 }
 
 blockquote:hover {
-  background: linear-gradient(180deg, #fff9c4 0%, #fff59d 100%);
+  /* Hover Verde Jungla */
+  background: linear-gradient(180deg, #F2FFF1 0%, #E4FEE0 100%);
+
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
@@ -106,10 +94,13 @@ blockquote:active {
 }
 
 blockquote:focus-visible {
-  outline: 3px solid var(--link);
+  outline: 3px solid #1F82E5;
   outline-offset: 3px;
-  background: linear-gradient(180deg, #fff9c4 0%, #fff176 100%);
+
+  /* Puedes mantener el hover */
+  background: linear-gradient(180deg, #F2FFF1 0%, #E4FEE0 100%);
 }
+
 
 /* ---------- Utilidades ---------- */
 small{
@@ -122,8 +113,7 @@ small{
 }
 
 /* Video */ 
-.dino-video-container{ max-width:640px; width:100%; margin:0 auto; } 
-.dino-video-container video{ width:100%; height:auto; border-radius:10px; background:#222; display:block; }
+.dino-video-container{ max-width:640px; width:100%; margin:0 auto; } .dino-video-container video{ width:100%; height:auto; border-radius:10px; background:#222; display:block; }
 
 .container{
   max-width: 900px; margin:0 auto;
@@ -146,111 +136,7 @@ pre.code{
   border-radius:8px;
   overflow:auto;
 }
-
-/* ==========================
-   QUICK LINKS BASE (dummy)
-   ========================== */
-a[href^="https://dummy.quickreply/"] {
-  display: inline-block;
-  margin: .4em .5em .4em 0;
-  padding: .5em 1.4em;
-  background: var(--bg-chip);
-  color: #222 !important;
-  border: 1.5px solid #ccc;
-  border-radius: 1.5em;
-  font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0,0,0,.05);
-  transition: background .2s, box-shadow .2s, color .2s, border-color .2s;
-  font-size: 1rem;
-  text-decoration: none !important;
-}
-a[href^="https://dummy.quickreply/"]:hover,
-a[href^="https://dummy.quickreply/"]:focus {
-  background: #f3f3f3;
-  box-shadow: 0 4px 10px rgba(0,0,0,.1);
-  color: #000 !important;
-  border-color: #999;
-  text-decoration: none !important;
-}
-
-/* ---------- Base ---------- No funcionan las variables en el plugin de markdown */
-:root{
-  --text: #2E2E2E;
-  --text-strong:#1F1F1F;
-  --muted:#6B6B6B;
-  --link:#4DA3FF;
-  --link-hover:#1F82E5;
-  --border:#D6D6D6;
-  --bg-chip:#fff;
-}
-html{ font-size: 16px; } /* 1rem = 16px */
-body{
-  color: #2E2E2E !important;
-  font-weight: 500;
-  line-height: 1.6  !important;
-  margin:0;
-  background:#fff;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; !important
-}
-
-/* Texto */
-p, li{ font-size: 1rem; color: #2E2E2E; }
-strong, b{ font-weight: 600; color: #202123; }
-em, i{ font-style: italic; }
-
-/* Enlaces */
-a{
-  color: #1F82E5;
-  text-decoration: none;
-}
-a:hover{ color: #4DA3FF; text-decoration: underline; }
-
-/* Listas */
-ul, ol{
-  padding-left: 1.2rem;
-  margin: .5rem 0 .75rem;
-}
-
-/* ---------- Encabezados ---------- */
-h1, h2, h3{
-  color: #202123;
-  line-height: 1.25;
-  letter-spacing: -0.0125em;
-  margin: 1.25rem 0 .6rem;
-}
-h1{
-  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.25rem);
-  font-weight: 700;
-}
-h2{
-  font-size: clamp(1.375rem, 1.05rem + 1.2vw, 1.75rem);
-  font-weight: 650;
-}
-h3{
-  font-size: clamp(1.125rem, 1rem + .6vw, 1.375rem);
-  font-weight: 500;
-}
-h3 + p{ margin-top: .25rem; }
-
-/* ---------- Daniela Candy Sky (Niños) ---------- */
-blockquote {
-  position: relative;
-  font-size: 1rem;
-  color: #444;
-  padding: 1.2rem 1.5rem 1.2rem 3rem;
-  margin: 1.5rem 0;
-
-  background: linear-gradient(180deg, #D7EEFF 0%, #E9DDF9 100%);
-  border-left: 3px solid #F4B6D8;
-
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
-  cursor: pointer;
-}
-
+/* ---------- Botones  ---------- */
 /* ==========================
    QUICK LINKS BASE
    Inspirado en blockquote + play_listening
@@ -266,7 +152,7 @@ a[href*=".quickreply/"] {
   border: 1px solid rgba(0,0,0,.10);
 
   font-size: .95rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: .1px;
   text-decoration: none !important;
@@ -312,30 +198,27 @@ a[href*=".quickreply/"]:focus-visible {
    Tonos más elegantes y menos infantiles
    ========================== */
 
-/* BLUE */
-a[href^="https://blue.quickreply/"] {
-  color: #1d4ed8 !important;
-  border-color: rgba(37,99,235,.22);
-  background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
-}
-a[href^="https://blue.quickreply/"]:hover,
-a[href^="https://blue.quickreply/"]:focus {
-  border-color: rgba(37,99,235,.34);
-  background: linear-gradient(180deg, #f3f8ff 0%, #e6f0ff 100%);
+/* Variantes — estilo consistente con Kids Blue */
+
+a[href^="https://blue.quickreply"]{
+  color: #1E5FAF !important;
+  border-color: #90CAF9;
 }
 
-/* GREEN */
-a[href^="https://green.quickreply/"] {
-  color: #166534 !important;
-  border-color: rgba(34,197,94,.22);
-  background: linear-gradient(180deg, #f8fff9 0%, #eefbf1 100%);
-}
-a[href^="https://green.quickreply/"]:hover,
-a[href^="https://green.quickreply/"]:focus {
-  border-color: rgba(22,163,74,.34);
-  background: linear-gradient(180deg, #f2fdf4 0%, #e6f7ea 100%);
+a[href^="https://green.quickreply"]{
+  color: #2E7D32 !important;
+  border-color: #7BC67E;
 }
 
+a[href^="https://yellow.quickreply"]{
+  color: #A87400 !important;
+  border-color: #E9C64A;
+}
+
+a[href^="https://pink.quickreply"]{
+  color: #A64E7A !important;
+  border-color: #E39AC0;
+}
 /* YELLOW */
 a[href^="https://yellow.quickreply/"] {
   color: #92400e !important;
@@ -456,87 +339,53 @@ td code, th code{
   td, th{ padding: 8px 10px; }
 }
 
-/* ============================================
-   LISTENLAB — PLAY LISTENING DIV (Light Mode)
-   Clean, calm, premium, adult
-   ============================================ */
+/**== Boton Generar Imagen ==**/
 
-#play_listening{
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6em;
-
-  padding: 0.85em 1.2em;
-  margin: 0.9em 0 1.1em 0;
-
-  background: linear-gradient(135deg, #f8fafc, #eef2f7); /* soft light */
-  color: #1f2937; /* slate-800 */
-
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.08);
-
-  font-size: 1.02rem;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-
+.boton-generar {
+  position: relative;
+  display: block;
+  padding: 1.2rem 1.4rem;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  color: #3A3455;
+  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
   user-select: none;
 
-  box-shadow:
-    0 6px 18px rgba(0,0,0,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.9);
+  border-radius: 18px;
 
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    background 0.18s ease;
+  /* Fondo Rainbow Azul */
+  background: linear-gradient(180deg, #FFF1FC 0%, #ECF6FF 40%, #F4FFF8 100%);
 }
 
-/* ▶ Play icon */
-#play_listening::before{
-  content: "▶";
-  font-size: 0.85em;
-  color: #2563eb; /* blue-600 */
-  transform: translateY(1px);
+
+/* Hover */
+.boton-generar:hover {
+background: linear-gradient(180deg, #FFE9FA 0%, #DFF0FF 40%, #E9FFF3 100%);
+
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-/* Hover — very subtle */
-#play_listening:hover{
-  background: linear-gradient(135deg, #ffffff, #e9eef5);
-  transform: translateY(-1px);
-  box-shadow:
-    0 10px 24px rgba(0,0,0,0.12);
+/* ---- Estilos internos para el título y el subtítulo ---- */
+
+.boton-generar b {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #6A4FB6;                         /* Lila elegante, combina con pasteles */
+  letter-spacing: 0.5px;
+  margin-bottom: 0.35rem;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.06); /* Muy sutil, solo contraste */
 }
 
-/* Active — press */
-#play_listening:active{
-  transform: translateY(0);
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.12),
-    inset 0 2px 6px rgba(0,0,0,0.08);
-}
-
-/* Focus — accessible but elegant */
-#play_listening:focus{
-  outline: none;
-  box-shadow:
-    0 0 0 3px rgba(37,99,235,0.25),
-    0 6px 18px rgba(0,0,0,0.1);
-}
-
-/* Playing state */
-#play_listening.is-playing{
-  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-}
-
-#play_listening.is-playing::before{
-  content: "⏸";
-  color: #1d4ed8;
-}
-
-/* Disabled */
-#play_listening.is-disabled{
-  opacity: 0.45;
-  cursor: not-allowed;
-  box-shadow: none;
+.boton-generar p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4A5568;                         /* Gris azulado suave */
+  line-height: 1.35;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.04);
 }

@@ -1,0 +1,308 @@
+/* ---------- Base ---------- */
+:root{
+  --text: #ffffff;   
+  --text-strong:#1F1F1F;
+  --muted:#6B6B6B;
+  --link:#4DA3FF;
+  --link-hover:#1F82E5;
+  --border:#D6D6D6;
+  --bg-chip:#fff;
+}
+html{ font-size: 16px; } /* 1rem = 16px */
+body{
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.6;
+  margin:0;
+  padding:40px 16px;
+  background:#181A20;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+/* Texto */
+p, li{ font-size: 1rem; }
+strong, b{ font-weight: 600; color: #202123; }
+em, i{ font-style: italic; }
+/* Enlaces */
+a{
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover{ color: var(--link-hover); text-decoration: underline; }
+/* Listas (heredan) */
+ul, ol{
+  padding-left: 1.2rem;
+  margin: .5rem 0 .75rem;
+}
+/* ---------- Encabezados: escala clara y aire ---------- */
+h1, h2, h3{
+  color: #1F1F1F !important;
+  line-height: 1.25;
+  letter-spacing: -0.0125em;
+  margin: 1.25rem 0 .6rem; /* ritmo vertical */
+}
+h1{
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.25rem); /* ~28–36px */
+  font-weight: 700;
+}
+h2{
+  font-size: clamp(1.375rem, 1.05rem + 1.2vw, 1.75rem); /* ~22–28px */
+  font-weight: 650;
+}
+h3{
+  font-size: clamp(1.125rem, 1rem + .6vw, 1.375rem); /* ~18–22px */
+  font-weight: 500;
+}
+/* Subtítulos estilo "Paso X" si los usas como h3 */
+h3 + p{ margin-top: .25rem; }
+
+/* ---------- Citas ---------- */
+blockquote {
+  position: relative;
+  font-size: 1rem;
+  color: #444;
+  padding: 1.2rem 1.5rem 1.2rem 3rem;
+  margin: 1.5rem 0;
+  background: linear-gradient(180deg, #fffde7 0%, #fff9c4 100%);
+  border-left: 3px solid #4DA3FF;
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra suave */
+}
+
+/* ---------- Utilidades ---------- */
+small{
+  font-size: .85rem;
+  color: #7a7a7a;
+  display:block;
+  margin-top: .5rem;
+  font-style: italic;
+  letter-spacing: .2px;
+}
+
+/* Video */ 
+.dino-video-container{ max-width:640px; width:100%; margin:0 auto; } .dino-video-container video{ width:100%; height:auto; border-radius:10px; background:#222; display:block; }
+
+.container{
+  max-width: 900px; margin:0 auto;
+}
+.badge{
+  display:inline-block;
+  margin-left:.5rem;
+  padding:.1rem .4rem;
+  background:#eef2f7;
+  border:1px solid #dbe2ea;
+  border-radius:6px;
+  font-size:.8rem;
+  color:#51607a;
+  vertical-align: middle;
+}
+pre.code{
+  background:#f7f7f7;
+  border:1px solid #e5e5e5;
+  padding:10px 12px;
+  border-radius:8px;
+  overflow:auto;
+}
+/* ---------- Botones  ---------- */
+/* ==========================
+   QUICK LINKS BASE (dummy)
+   ========================== */
+a[href^="https://dummy.quickreply/"] {
+  display: inline-block;
+  margin: .4em .5em .4em 0;
+  padding: .5em 1.4em;
+  background: var(--bg-chip);
+  color: #222 !important;
+  border: 1.5px solid #ccc;
+  border-radius: 1.5em;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  transition: background .2s, box-shadow .2s, color .2s, border-color .2s;
+  font-size: 1rem;
+  text-decoration: none !important;
+}
+a[href^="https://dummy.quickreply/"]:hover,
+a[href^="https://dummy.quickreply/"]:focus {
+  background: #f3f3f3;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  color: #000 !important;
+  border-color: #999;
+  text-decoration: none !important;
+}
+
+/* ==========================
+   QUICK LINKS COLORES (Kids)
+   ========================== */
+a[href^="https://blue.quickreply"],
+a[href^="https://green.quickreply"],
+a[href^="https://yellow.quickreply"],
+a[href^="https://pink.quickreply"]{
+  display: inline-block;
+  margin: .5em .6em .5em 0;
+  padding: 0.9em 1.6em;             /* más grandes */
+  border-radius: 1.8em;             /* redondeados pill */
+  font-size: 1.125rem;              /* ~18px */
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3;
+ box-shadow: 0 6px 14px rgba(0,0,0,.12);
+  transition: transform .06s ease, filter .15s ease;
+  text-decoration: none !important;
+}
+
+/* Hover/Active: más “juguetón” */
+a[href*=".quickreply/"]:hover { transform: translateY(-1px); filter: brightness(.97); }
+a[href*=".quickreply/"]:active { transform: translateY(0); filter: brightness(.95); }
+
+/* Colores principales */
+a[href^="https://blue.quickreply"]   { background: #2D7FF9; color:#fff !important; }
+a[href^="https://green.quickreply"]  { background: #2ECC71; color:#fff !important; }
+a[href^="https://yellow.quickreply"] { background: #F7B500; color:#1A1A1A !important; }
+a[href^="https://pink.quickreply"]    { background: #FF6FB1; color:#fff !important; }
+
+/* ==========================
+   QUICK LINKS COLORES (Primaria)
+   ========================== */
+a[href^="https://bluep.quickreply"],
+a[href^="https://greenp.quickreply"],
+a[href^="https://yellowp.quickreply"],
+a[href^="https://purple.quickreply"]{
+  display: inline-block;
+  margin: .4em .5em .4em 0;
+  padding: 0.7em 1.3em;             /* un poco más pequeños */
+  border-radius: 1.2em;             /* menos redondeados */
+  font-size: 1rem;                  /* ~16px */
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+  box-shadow: 0 3px 8px rgba(0,0,0,.1);
+  transition: filter .15s ease;
+  text-decoration: none !important;
+}
+
+/* Hover/Active más sobrio */
+a[href^="https://bluep.quickreply"]:hover,
+a[href^="https://greenp.quickreply"]:hover,
+a[href^="https://yellowp.quickreply"]:hover,
+a[href^="https://purple.quickreply"]:hover {
+  filter: brightness(.96);
+}
+
+/* Colores principales para primaria (más sobrios) */
+a[href^="https://bluep.quickreply"]   { background: #1E6DE0; color:#fff !important; }
+a[href^="https://greenp.quickreply"]  { background: #27AE60; color:#fff !important; }
+a[href^="https://yellowp.quickreply"] { background: #FFB300; color:#1A1A1A !important; }
+a[href^="https://purple.quickreply"]   { background: #9B59B6; color:#fff !important; }
+
+/* ===== PATCH CONTRASTE PARA FONDO OSCURO (drop-in) ===== */
+p, ul, ol, li, small{ color:#E0E0E0 !important; }
+h1, h2, h3, strong, b{ color:#FFFFFF !important; }
+a{ color:#8AB4FF !important; }
+a:hover{ color:#AECBFA !important; }
+
+/* Cita/Post-it más legible en oscuro */
+blockquote{
+  color:#F0F0F0 !important;
+  background: linear-gradient(180deg,#1e1e14 0%,#2a2813 100%) !important;
+  border-left:3px solid #8AB4FF !important;
+  box-shadow:0 6px 14px rgba(0,0,0,.45) !important;
+}
+blockquote::before{ color:#8AB4FF !important; opacity:.95; }
+
+/* Quick links base (dummy) con contraste en oscuro */
+a[href^="https://dummy.quickreply/"]{
+  background:#1F1F1F !important;
+  color:#EEE !important;
+  border:1.5px solid #444 !important;
+  box-shadow:0 4px 10px rgba(0,0,0,.35) !important;
+}
+a[href^="https://dummy.quickreply/"]:hover,
+a[href^="https://dummy.quickreply/"]:focus{
+  background:#262626 !important;
+  border-color:#666 !important;
+  color:#FFF !important;
+}
+
+/* Marcadores de lista más claros */
+ul>li::marker, ol>li::marker{ color:#C7CED6; }
+/* =========================================================
+   TABLAS “ESTILO CHATGPT” — DARKMODE COMPATIBLE CON TU PALETA
+   ========================================================= */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0 1.25rem;
+  font-size: .95rem;
+  background: #1e1f20;             /* Fondo principal */
+  border: 1px solid #333;          /* Borde exterior tenue */
+  border-radius: 12px;
+  overflow: hidden;
+  color: #e0e0e0;                  /* Texto claro */
+}
+
+/* Encabezado */
+thead th {
+  background: #2b2c2f;             /* Encabezado un poco más claro */
+  color: #fff;
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-bottom: 1px solid #3a3b3d;
+  vertical-align: middle;
+}
+
+/* Celdas */
+td, th {
+  padding: 10px 12px;
+  border-bottom: 1px solid #2d2e30;
+  vertical-align: top;
+}
+
+/* Zebra + hover */
+tbody tr:nth-child(even){ background:#232425; }
+tbody tr:hover{ background:#2f3033; }
+
+/* Alineación */
+td.right, th.right{ text-align: right; }
+td.center, th.center{ text-align: center; }
+td.nowrap{ white-space: nowrap; }
+
+/* Cabecera fija */
+thead th{ position: sticky; top: 0; z-index: 1; }
+
+/* Caption */
+caption{
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  color: #fafafa;
+  padding: .25rem .25rem .5rem;
+}
+
+/* Código dentro de celdas */
+td code, th code {
+  background: #2b2c2f;
+  border: 1px solid #3c3d40;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #f0f0f0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: .9em;
+}
+
+/* Scroll horizontal responsivo */
+.table-wrap {
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-wrap > table { margin: 0; }
+
+/* Compactación móvil */
+@media (max-width: 640px){
+  table{ font-size: .92rem; }
+  td, th{ padding: 8px 10px; }
+}
+
